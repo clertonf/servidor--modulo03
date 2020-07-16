@@ -1,0 +1,55 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+<title>Portfolio - Clerton Filho</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+
+<div id="wrapper">
+
+    <h1> My favorite videos about programming </h1> </br>
+
+</div>
+
+<section class="cards">
+
+    {% for item in items %}
+
+    <div class="card" id="{{item.id}}">
+        <div class="card__image--container {{'featured-wrapper' if item.featured}}">
+            <img src="https://img.youtube.com/vi/{{item.id}}/mqdefault.jpg" alt="Imagem de {{item.title}}">
+            {% if item.featured%}
+                <div class="featured">Featured</div>
+            {% endif %}
+
+            </div>
+            
+            <div class="card__content">
+                <p> {{item.title}}</p>
+            </div>
+            
+            <div class="card__info">
+                <p>{{item.duration}}</p>
+                <p class="card__price">{{item.price}}</p>
+
+            </div>
+        
+    </div>
+
+    {% endfor %}
+
+</section>
+
+
+<script src="scripts.js"></script>
+
+{% endblock %}

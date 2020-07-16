@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+    {% block head %}
+        <title>Clerton Filho</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header>
+        <div class="links">
+            <a href="/"> About </a>
+            <a href="/portfolio"> Videos </a>
+        </div>
+    </header>
+
+ 
+    {% block content %}{% endblock %}
+
+</body>
+
+</html>
+
+<!-- https://www.youtube.com/embed/QVrrqgDhhu4 -->
